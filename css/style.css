@@ -1,6 +1,6 @@
 
 .hero-image {
-    background-image: url('/assets/celulares.jpg'); /* Ruta a tu imagen de portada */
+    background-image: url('../assets/celulares.jpg'); 
     height: 50vh;
     background-position: center;
     background-repeat: no-repeat;
