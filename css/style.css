@@ -1,28 +1,128 @@
-.hero-container {
-    position: relative;
-    text-align: center;
-    color: white;
-}
-.hero-image {
-    width: 100%;
-    height: 50vh;
-    object-fit: cover;
-}
-.hero-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 2;
+@charset "UTF-8";
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
-.hero-text h1 {
-    font-size: 3em;
-    font-weight: bold;
-    border: 3px solid white; 
+footer {
+  margin-top: auto; /* Asegura que el footer esté siempre en la parte inferior */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial, sans-serif";
+}
+
+.boton-comprar {
+  all: unset;
+  text-decoration: none;
+  color: white;
+  background-color: #343a40;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.boton-comprar:hover {
+  background-color: black;
+}
+
+header .navbar {
+  height: 80px;
+  background-color: #343a40;
+}
+header .navbar .navbar-brand img {
+  width: 30px;
+  height: 30px;
+}
+header .navbar .navbar-nav .nav-item .nav-link {
+  color: #ffffff;
+  transition: color 0.3s ease-in-out;
+}
+header .navbar .navbar-nav .nav-item .nav-link:hover {
+  color: white;
+}
+header .navbar .navbar-nav .nav-item .nav-link.dropdown-toggle {
+  transition: all 0.3s ease-in-out;
+}
+header .navbar .navbar-nav .nav-item .dropdown-menu {
+  background-color: #343a40;
+}
+header .navbar .navbar-nav .nav-item .dropdown-menu .dropdown-item {
+  color: #ffffff;
+}
+header .navbar .navbar-nav .nav-item .dropdown-menu .dropdown-item:hover {
+  color: white;
+}
+
+main .hero-container {
+  position: relative;
+  text-align: center;
+  color: #ffffff;
+  overflow: hidden;
+  height: 400px; /* Altura fija para el contenedor */
+}
+main .hero-container .hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Recorta la imagen en los bordes */
+  object-position: center; /* Ajusta la posición de la imagen si es necesario */
+}
+main .hero-container .hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 10px;
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out forwards;
+}
+main .hero-container .hero-text h1 {
+  font-size: 3em;
+  transition: font-size 0.3s ease-in-out;
+}
+main .hero-container .hero-text p {
+  font-size: 1.2em;
+  transition: font-size 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@media (max-width: 768px) {
+  main .hero-container .hero-text {
     padding: 10px;
+  }
+  main .hero-container .hero-text h1 {
+    font-size: 2.5em;
+  }
+  main .hero-container .hero-text p {
+    font-size: 1em;
+  }
+}
+@media (max-width: 576px) {
+  main .hero-container .hero-text {
+    padding: 5px;
+  }
+  main .hero-container .hero-text h1 {
+    font-size: 2em;
+  }
+  main .hero-container .hero-text p {
+    font-size: 0.9em;
+  }
 }
 
-.hero-text p {
-    font-size: 1.2em;
-}
+/*# sourceMappingURL=style.css.map */

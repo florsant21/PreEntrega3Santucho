@@ -1,0 +1,8 @@
+@mixin transition($property) {
+    transition: $property $transition-speed ease-in-out;
+  }
+  
+  @mixin transform($transformation) {
+    transform: $transformation;
+  }
+  
